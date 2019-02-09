@@ -121,10 +121,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
 	padding: 1rem;
-	display: flex;
-	flex-wrap: wrap;
   background-color: #3397DB;
-  align-items: center;
 }
 .filter-options h2 {
 	width: 100%;
@@ -133,7 +130,12 @@ nav h1 a {
   color: white;
   font-size: 1rem;
 }
+.flex-select {
+	display: flex;
+	flex-direction: column;
+}
 .filter-options select {
+	display: block;
   width: 100%;
 	margin: .5rem 0;
   padding: 0;
@@ -294,7 +296,8 @@ nav h1 a {
 		height: 6rem;
 	}
 	/* ====================== Restaurant Filtering ====================== */
-	.filter-options {
+	.flex-select {
+		flex-direction: row;
 		justify-content: space-between;
 	}
 	.filter-options select {
@@ -307,5 +310,20 @@ nav h1 a {
 	}
 	#restaurants-list li {
 		width: 49%;
+	}
+}
+
+@media screen and (min-width: 64rem)  {
+	/* ====================== Restaurant Filtering ====================== */
+	.flex-select {
+		flex-direction: column;
+	}
+	.filter-options select {
+		width: 49%;
+	}
+
+	/* ====================== Restaurant Listing ====================== */
+	#restaurants-list li {
+		width: 32.5%;
 	}
 }
