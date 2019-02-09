@@ -1,25 +1,34 @@
 @charset "utf-8";
-/* CSS Document */
+
+/* Mobile first */
 
 html {
 	box-sizing: border-box;
+	font-size: 1rem;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-body, td, th, p{
+body, td, th, p {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1rem;
 	color: #333;
 	line-height: 1.5;
 }
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+	position: relative;
 }
+
+#page-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1rem;
@@ -140,7 +149,7 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
-  list-style: outside none none;
+  list-style-type: none;
   margin: 0;
   padding: 1.875rem 1rem 3.75rem;
   text-align: center;
