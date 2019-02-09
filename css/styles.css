@@ -295,35 +295,48 @@ nav h1 a {
 	nav {
 		height: 6rem;
 	}
+
 	/* ====================== Restaurant Filtering ====================== */
+	.filter-options h2 {
+		text-align: center;
+		margin: 0 0 .5rem;
+	}
 	.flex-select {
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
 	}
 	.filter-options select {
-		width: 49%;
+		margin: 0 .5rem;
+		width: 30%;
+		max-width: 17.5rem;
 	}
 
 	/* ====================== Restaurant Listing ====================== */
-	#restaurants-list {
-		justify-content: space-between;
-	}
 	#restaurants-list li {
 		width: 49%;
+		margin-right: 2%;
+	}
+	#restaurants-list li:nth-child(2n) {
+		margin-right: 0;
 	}
 }
 
-@media screen and (min-width: 64rem)  {
-	/* ====================== Restaurant Filtering ====================== */
-	.flex-select {
-		flex-direction: column;
-	}
-	.filter-options select {
-		width: 49%;
-	}
-
+@media screen and (min-width: 58rem)  {
 	/* ====================== Restaurant Listing ====================== */
 	#restaurants-list li {
-		width: 32.5%;
+		width: 32%;
+	}
+	#restaurants-list li:nth-child(2n) {
+		margin-right: 2%;
+	}
+	#restaurants-list li:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+@media screen and (min-width: 81.25rem)  {
+	/* ====================== Restaurant Listing ====================== */
+	#restaurants-list {
+		max-width: 80rem;
 	}
 }
