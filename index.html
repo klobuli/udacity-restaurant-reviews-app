@@ -27,10 +27,10 @@
         <div class="filter-options">
           <h2>Filter Results</h2>
           <div class="flex-select">
-            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <select id="neighborhoods-select" aria-label="Choose a neighborhood" name="neighborhoods" onchange="updateRestaurants()">
               <option value="all">All Neighborhoods</option>
             </select>
-            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <select id="cuisines-select" aria-label="Choose a cuisine" name="cuisines" onchange="updateRestaurants()">
               <option value="all">All Cuisines</option>
             </select>
           </div>
@@ -38,7 +38,7 @@
         <ul id="restaurants-list"></ul>
       </section>
     </main>
-    <footer id="footer" role="complementary">
+    <footer id="footer" role="contentinfo">
       Copyright (c) 2019 <a href="/"><strong>Restaurant Reviews</strong></a><br> All Rights Reserved.
     </footer>
   </div>
