@@ -172,7 +172,7 @@ nav h1 a {
 	height: auto;
   margin: 0;
 }
-#restaurants-list li h2 {
+#restaurants-list li h2 a:link, #restaurants-list li h2 a:visited {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 1rem;
@@ -180,11 +180,14 @@ nav h1 a {
   margin: 1.25rem 0 .625rem;
   text-transform: uppercase;
 }
+#restaurants-list li h2 a:hover, #restaurants-list li h2 a:focus {
+	text-decoration: underline;
+}
 #restaurants-list p {
   margin: 0;
   font-size: .75rem;
 }
-#restaurants-list li a {
+#restaurants-list li > a {
   background-color: orange;
   color: #fff;
   display: inline-block;
