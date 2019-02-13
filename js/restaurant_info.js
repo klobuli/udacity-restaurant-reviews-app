@@ -135,15 +135,35 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  name.classList.add('reviewer-name');
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
+  date.classList.add('review-date');
   li.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.classList.add('rating');
   li.appendChild(rating);
+  const emptyStar = '<i class="far fa-star"></i>';
+  const fullStar = '<i class="fas fa-star"></i>';
+  if(rating.innerHTML === `Rating: 1`) {
+    rating.innerHTML = `Rating: ${fullStar}${emptyStar}${emptyStar}${emptyStar}${emptyStar}`;
+  }
+  if(rating.innerHTML === `Rating: 2`) {
+    rating.innerHTML = `Rating: ${fullStar}${fullStar}${emptyStar}${emptyStar}${emptyStar}`;
+  }
+  if(rating.innerHTML === `Rating: 3`) {
+    rating.innerHTML = `Rating: ${fullStar}${fullStar}${fullStar}${emptyStar}${emptyStar}`;
+  }
+  if(rating.innerHTML === `Rating: 4`) {
+    rating.innerHTML = `Rating: ${fullStar}${fullStar}${fullStar}${fullStar}${emptyStar}`;
+  }
+  if(rating.innerHTML === `Rating: 5`) {
+    rating.innerHTML = `Rating: ${fullStar}${fullStar}${fullStar}${fullStar}${fullStar}`;
+  }
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
