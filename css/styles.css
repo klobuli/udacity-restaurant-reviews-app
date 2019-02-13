@@ -244,8 +244,8 @@ font-size: 3rem;
 	height: auto;
 }
 #restaurant-address {
-	font: 400 .8rem/normal 'Karla', sans-serif;
-	margin: .625rem 0;
+	font: 700 1rem/normal 'Karla', sans-serif;
+	margin: 1rem auto .6rem;
 	padding-left: .2rem;
 }
 #restaurant-cuisine {
@@ -362,7 +362,6 @@ font-size: 3rem;
 	}
 	#restaurant-address {
 		max-width: 36rem;
-		margin: .7rem auto;
 	}
 	#restaurant-hours {
 		font-family: 'Karla';
